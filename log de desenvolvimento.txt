@@ -1,0 +1,10 @@
+Registro de ações para embasar roteiro do vídeo de apresentação e readme no github.
+
+- criação das pastas backend e frontend
+
+ ==== inicio do projeto pelo back-end (especialidade da casa) ====
+
+- criação deste arquivo de log;
+- criação do projeto no Spring Initializr com as dependências : WEB, LOMBOK, POSTGRESQL, BEAN, DATA JPA;
+
+- criação do projeto no giithub com primeiro commit;
