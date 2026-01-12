@@ -1,0 +1,25 @@
+package com.cso_jr.challenge.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.Instant;
+import java.util.UUID;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class NoteDTO {
+
+    private UUID id;
+    private String site;
+    private String equipment;
+    private String variable;
+    private Instant timestamp;
+    private String author;
+    private String message;
+
+}
