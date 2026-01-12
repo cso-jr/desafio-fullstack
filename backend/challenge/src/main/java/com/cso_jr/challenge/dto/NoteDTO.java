@@ -1,5 +1,6 @@
 package com.cso_jr.challenge.dto;
 
+import com.cso_jr.challenge.entities.Note;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,4 +23,15 @@ public class NoteDTO {
     private String author;
     private String message;
 
+    public NoteDTO(Note entity) {
+
+        id = entity.getId();
+        site = entity.getSite();
+        equipment = entity.getEquipment();
+        variable = entity.getVariable();
+        timestamp = entity.getTimestamp();
+        author = entity.getAuthor();
+        message = entity.getMessage();
+
+    }
 }

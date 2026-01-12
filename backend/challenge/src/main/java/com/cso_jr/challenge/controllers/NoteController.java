@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 @RequestMapping(value="/api/v1/notes")
@@ -20,19 +21,9 @@ public class NoteController {
     @Autowired
     private NoteService service;
 
-
     @GetMapping
-    public ResponseEntity<Page<NoteDTO>> findAll(
-            @RequestParam(required = false) String site,
-            @RequestParam(required = false) String equipment,
-            @RequestParam(required = false) LocalDate startDate,
-            @RequestParam(required = false) LocalDate endDate,
-            Pageable pageable
-    ){
-        Page<NoteDTO> dtos = service.findAll(Pageable pageable);
-        return ResponseEntity.ok((Page<NoteDTO>) dtos);
+    public ResponseEntity<List<NoteDTO>> findAll() {
+        List<NoteDTO> dto = service.findAll();
+        return ResponseEntity.ok(dto);
     }
-
-
-
 }
